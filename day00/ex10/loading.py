@@ -32,11 +32,11 @@ def ft_progress(lst):
 		else:
 			eta = eta -step
 		percentage =int(i/len(lst) * 100)
-		perc_count = int(percentage / 10)
+		perc_count = int(percentage / 5)
 
 		print('\r '+ "ETA: " + (str(round(eta - step, 2)) + "s").ljust(6, ' ')
 			+ " [" + str(percentage).ljust(2) + "%]["
-			+ "="* perc_count +">"+ " " * (10 - perc_count) + "] "
+			+ "="* perc_count +">"+ " " * (20 - perc_count) + "] "
 			+ " " + str(i).rjust(len(str(length))) + "/" + str(length)
 			+ " | elapsed time "
 			+ str(round(s, 2)).ljust(6, ' ') + "s", end='')
