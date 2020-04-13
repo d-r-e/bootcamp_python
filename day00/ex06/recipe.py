@@ -20,8 +20,7 @@ def add_recipe(cookbook):
 	return cookbook
 
 def recipe_tostr(cookbook, name):
-	print("Name:", name)
-	print("Meal:", cookbook[name]['meal'])
+	print("Recipe for", name)
 	print("Ingredients: ", end='')
 	for ingredient in cookbook[name]['ingredients']:
 		print(ingredient, end='')
@@ -29,7 +28,8 @@ def recipe_tostr(cookbook, name):
 			print(", ", end='')
 		else:
 			print()
-	print("Prep time:", cookbook[name]['prep_time'], "minutes\n")
+	print("To be eaten for", cookbook[name]['meal'])
+	print("Takes", cookbook[name]['prep_time'], "minutes of cooking.\n")
 
 def find_recipe(cookbook):
 	name = input("Write the name of the recipe to search: ")
@@ -94,6 +94,6 @@ def main():
 		elif x == "5":
 			exit()
 		else:
-			print("This option doesn't exist, please type the corresponding number.\n")
+			print("\nThis option doesn't exist, please type the corresponding number.\n")
 if __name__ == "__main__":
 	main()
