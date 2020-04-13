@@ -21,10 +21,16 @@ if __name__ == "__main__":
 		print("What's your guess between 1 and 99?")
 		x = input()
 		if x == "exit":
+			print("Goodbye!")
 			exit()
 		attempts += 1
 		if not x.isdigit():
 			print("That's not a number.")
+		elif int(x) == 42:
+			print("The answer to the ultimate question of life, "
+				+ "the universe and everything is 42.")
+			print("Congratulations! You got it on your first try!")
+			exit()
 		elif int(x) == nb:
 			print("Congratulations, you've got it!")
 			print("You won in", attempts, "attempts!")
