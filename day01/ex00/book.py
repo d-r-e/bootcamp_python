@@ -25,14 +25,13 @@ class Book(object):
 			for recipe in each:
 				if recipe._name == value:
 					print(str(recipe))
-					return
+					return recipe
 		print("Recipe not found.")
 	
 	def get_recipes_by_types(self, recipe_type):
 		if recipe_type in ['starter', 'lunch', 'dessert']:
 			for each in self._recipes_list[recipe_type]:
-				self.get_recipe_by_name(each._name)
-				print()
+				print(each._name)
 			return
 		print("Invalid type.")
 
