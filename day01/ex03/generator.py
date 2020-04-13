@@ -38,7 +38,7 @@ if __name__ == "__main__":
 """
 if __name__ == "__main__":
 	text = "Le Lorem Ipsum est simplement du faux texte."
-	for word in generator(text, sep=" ", option="suffle"):
+	for word in generator(text, sep=" ", option="shuffle"):
 		print(word)
 """
 
