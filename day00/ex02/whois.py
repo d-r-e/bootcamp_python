@@ -6,6 +6,8 @@ def	main():
 	if len(sys.argv) != 2:
 		print("ERROR")
 		return
+	if sys.argv[1][0] == '-':
+		sys.argv[1] = sys.argv[1][1:]
 	for each in sys.argv[1]:
 		if each.isdigit() == 0:
 			print("ERROR")
