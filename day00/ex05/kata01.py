@@ -8,9 +8,7 @@ def main():
 	}
 
 	for each in languages:
-		print (each, end='')
-		print(" was created by ", end='')
-		print(languages[each])
+		print(each + " was created by " + languages[each])
 
 if __name__ == "__main__":
 	main()
