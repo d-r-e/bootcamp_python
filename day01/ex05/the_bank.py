@@ -34,6 +34,8 @@ class Account(object):
         return ret
 
     def fix(self):
+        if self.iscorrupted() is False:
+            return True
         for each in self.__dict__:
             if each.startswith('b'):
                 del self.__dict__[each]
@@ -68,6 +70,10 @@ class Bank(object):
         orig = None
         dst = None
         for each in self.account:
+            if each.iscorrupted():
+                if self.account[each].fix() is False:
+                    print("Corrupted account")
+                    return
             if origin == each.name or origin == each.id:
                 orig = each
             if dest == each.name or dest == each.id:
@@ -75,9 +81,6 @@ class Bank(object):
 
         if orig is None or dst is None:
             print("Account does not exist.")
-            return
-        if orig.iscorrupted() or dst.iscorrupted():
-            print("Corrupted account")
             return
         if orig.value < amount:
             print("Not enough money to make the transfer")
