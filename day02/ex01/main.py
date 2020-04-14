@@ -39,5 +39,5 @@ if __name__ == '__main__':
     doom_printer(obj)
     obj = what_are_the_vars(12, "Yes", [0, 0, 0], a=10, hello="world")
     doom_printer(obj)
-    obj = what_are_the_vars(42, a=12, var_0="world")
+    obj = what_are_the_vars(42, a=10, var_0="world")
     doom_printer(obj)
