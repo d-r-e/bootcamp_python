@@ -3,6 +3,8 @@
 import sys
 
 def	main():
+	if len(sys.argv) == 1:
+		return
 	if len(sys.argv) != 2:
 		print("ERROR")
 		return
