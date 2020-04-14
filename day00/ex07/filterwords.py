@@ -20,7 +20,6 @@ def main():
 	if n == 0:
 		return
 	words = sys.argv[1].split(' ')
-	replaced = []
 	words[:] = [re.sub("\W", '', each) for each in words]
 	longwords = []
 	for each in words:
