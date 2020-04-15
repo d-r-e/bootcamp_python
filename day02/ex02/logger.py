@@ -5,7 +5,7 @@ from random import randint
 import functools
 from string import capwords
 import getpass
-from math import floor
+
 
 def log(func):
     @functools.wraps(func)
@@ -19,17 +19,16 @@ def log(func):
             exectime = exectime * 1000
             units = "ms"
         f = open("machine.log", "a")
-        username = getpass.getuser()
         f.write("({})Running: {}    [ exec-time = {} {} ]\n".format(
-            username,
+            getpass.getuser(),
             capwords(func.__name__.replace('_', ' ')),
             round(exectime, 3),
             units))
         f.close()
-        
         return ret
-        
+
     return wrapper
+
 
 class CoffeeMachine():
 
