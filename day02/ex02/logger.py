@@ -20,7 +20,7 @@ def log(func):
             units = "ms"
         f = open("machine.log", "a")
         username = getpass.getuser()
-        f.write("({})Running: {}    [ exec-time = {} {}]\n".format(
+        f.write("({})Running: {}    [ exec-time = {} {} ]\n".format(
             username,
             capwords(func.__name__.replace('_', ' ')),
             round(exectime, 3),
