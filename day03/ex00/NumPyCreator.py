@@ -10,7 +10,7 @@ def from_tuple(tpl, type=None):
 
 
 def from_iterable(itr, type=None):
-    return np.array([elem for elem in itr])
+    return np.array([elem for elem in itr], type)
 
 
 def from_shape(shape, value, type=None):
@@ -19,6 +19,7 @@ def from_shape(shape, value, type=None):
 
 if __name__ == "__main__":
     print(from_list([1, 2, 3.9, 4, 5], int),)
-    print(from_tuple((1, 2, 3, 4, 5)))
+    print(from_tuple((1, 2, 3, 4, 5), float))
     print(from_iterable(map(lambda x: x * 2, range(4))))
+    print(from_iterable("abcdefg"))
     print(from_shape((5, 5), 1.99, int))
