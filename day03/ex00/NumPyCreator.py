@@ -34,7 +34,7 @@ class NumPyCreator:
 
 
 if __name__ == "__main__":
-    npc = NumPyCreator()
+    npc as NumPyCreator
 
     print(npc.from_list([1, 2, 3.9, 4, 5], int))
     print(npc.from_tuple((1, 2, 3, 4, 5), float))
