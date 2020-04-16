@@ -34,10 +34,9 @@ class NumPyCreator:
 
 
 if __name__ == "__main__":
-    npc as NumPyCreator
 
-    print(npc.from_list([1, 2, 3.9, 4, 5], int))
-    print(npc.from_tuple((1, 2, 3, 4, 5), float))
-    print(npc.from_iterable(map(lambda x: x * 2, range(4))))
-    print(npc.from_iterable("abcdefg"))
-    print(npc.from_shape((5, 5), 1.99, int))
+    print(NumPyCreator.from_list([1, 2, 3.9, 4, 5], int))
+    print(NumPyCreator.from_tuple((1, 2, 3, 4, 5), float))
+    print(NumPyCreator.from_iterable(map(lambda x: x * 2, range(4))))
+    print(NumPyCreator.from_iterable("abcdefg"))
+    print(NumPyCreator.from_shape((5, 5), 1.99, int))
